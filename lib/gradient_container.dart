@@ -1,10 +1,14 @@
+
+
 import 'package:flutter/material.dart';
+import 'dice_roller.dart';
 
-
+// ignore: must_be_immutable
 class GradientContainer extends StatelessWidget {
   const GradientContainer(this.colors, {super.key});
   final List<Color> colors;
 
+  
   @override
   Widget build(context) {
     return Container(
@@ -13,13 +17,7 @@ class GradientContainer extends StatelessWidget {
           colors: colors,
         ),
       ),
-      child: Center(
-        child: Image.asset(
-          'assets/images/dice-images/dice-1.png',
-          width: 200,
-          height: 200,
-        ),
-      ),
+      child: const DiceRoller(),
     );
   }
 }
